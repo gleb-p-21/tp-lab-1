@@ -10,6 +10,10 @@ void addHero(Keeper& k) {
     std::cout << "Имя героя: "; std::getline(std::cin, name);
     std::cout << "Оружие: "; std::getline(std::cin, weapon);
     std::cout << "Количество навыков: "; std::cin >> n; std::cin.ignore();
+    if (n < 0) {
+    std::cout << "Ошибка: количество навыков не может быть отрицательным!\n";
+    return;
+    }
     std::string* sk = new std::string[n];
     for (int i = 0; i < n; ++i) {
         std::cout << "Навык " << i + 1 << ": "; std::getline(std::cin, sk[i]);
