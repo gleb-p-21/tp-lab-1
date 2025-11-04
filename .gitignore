@@ -1,0 +1,17 @@
+# Скомпилированные файлы
+*.exe
+*.obj
+*.o
+*.out
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj*
+Debug/
+Release/
+x64/
+
+# Прочее
+.DS_Store
