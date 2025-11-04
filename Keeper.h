@@ -1,6 +1,7 @@
 #ifndef KEEPER_H
 #define KEEPER_H
 #include "Character.h"
+#include "CustomExceptions.h"
 
 class Keeper {
 private:
@@ -10,7 +11,12 @@ private:
     void resize();
 public:
     Keeper();
+    Keeper(const Keeper& other); // Конструктор копирования
     ~Keeper();
+
+    // Операторы (требование методички)
+    Keeper& operator=(const Keeper& other); // Оператор присваивания
+    Character* operator[](int index); // Оператор индексации
 
     void add(Character* c);
     void remove(int index);
